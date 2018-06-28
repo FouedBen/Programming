@@ -57,7 +57,7 @@ namespace ProgrammingExercise.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
+            ViewBag.ReturnUrl = "Flights";
             return View();
         }
 
@@ -79,7 +79,7 @@ namespace ProgrammingExercise.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Flights");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:

@@ -1,0 +1,60 @@
+﻿@model ProgrammingExercise.Models.V_ListFlights
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartAiroport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartAiroport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DestinationAirport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DestinationAirport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightTime)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fuel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fuel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFlight }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
